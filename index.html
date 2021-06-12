@@ -1,98 +1,47 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>ALEX</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-		
-		<style>
-			body {
-				background-color: #000000;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-			}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Krimskiy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:700'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'><link rel="stylesheet" href="./style.css">
 
-			* {
-            	margin: 0;
-            	padding: 0;
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <canvas id="stars"></canvas>
+  <canvas id="yahia"></canvas>
+  <div class="container">
+    <div class="template color-yellow" data-template="home">
+      <main>
+        <h1><span style="font-size:70%";>Добро пожаловать на сайт</span><span>
+            <mark>Алексея Крымского</mark> </span><span style="font-size:60%;"> Python-Разработчик</span></h1>
+        <div class="p"><a href="mailto:krimskiy@internet.ru"><span>krimskiy@internet.ru</span></a><a href="tel:79953049885"><span>+7 (995) 304-98-85</span></a></div>
+        <div class="links">
+          <a class="link color-yellow" href="https://t.me/soloman_py" target="_blank">Telegram</a>
+          <a class="link color-yellow" href="https://vk.com/user_73" target="_blank">ВКонтакте</a>
+          <a class="link color-yellow" href="https://instagram.com/krimskiy_a" target="_blank">Instagram</a>
+        </div>
+      </main>
+      <footer>
+        <div class="links"><span style="color:#B3B3B3;">made by Alexey Krimskiy</span></div>
+      </footer>
+    </div>
+    <div class="loading" id="identity">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<script src='https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'></script><script  src="./script.js"></script>
 
-				font-family: monospace;
-				color: white;
-				text-shadow: 2px 2px #000;
-			}
-
-			.center {
-				position: fixed;
-				top: 50%;
-				left: 50%;
-
-				transform: translate(-50%, -50%);
-				color: white;
-				text-shadow: 2px 2px #000;
-        	}
-			
-			.info {
-				z-index: 999999;
-				color: white;
-			}
-
-			.begin {
-				cursor: pointer;
-			}
-
-			#overlay {
-				position: fixed;
-				z-index: 9999;
-				background-color: #000;
-
-				top: 0px;
-				left: 0px;
-				width: 100%;
-				height: 100%;
-        	}
-
-			#swarm {
-				display: block;
-			}
-
-			.marquee {
-				width: 570px;
-				line-height: 50px;
-				color: white;
-				white-space: nowrap;
-				overflow: hidden;
-				box-sizing: border-box;
-			}
-			
-			.marquee p {
-				display: inline-block;
-				padding-left: 100%;
-				animation: marquee 55s linear infinite;
-			}
-
-			@keyframes marquee {
-				0%   { transform: translate(0, 0); }
-				100% { transform: translate(-100%, 0); }
-			}
-		</style>
-	</head>
-	
-	<body>
-		<canvas id="swarm"></canvas>
-		<div id="overlay" onclick="music.play();"><span class="center info" id="status_text"></span></div>                                                                  
-    <div class="main center">
-        <div style="font-size: 40px;" class="logo-blur logo-bass"><span class="logo-neon">Krimskiy</span></div>                                        
-
-		<div class="center" id="data" style="opacity: 0%; margin-top: 120px; text-align: center;">
-			<a href="https://vk.com/user_73">vk</a>
-		</div>
-		<div class="center" id="shoutout_marquee" style="opacity: 0%; margin-top: 155px;">
-			<div class="marquee">
-				<p>И это тоже пройдет. Все - суета и томление духа. И никому не дано пересказать всего.И не насытится око зрением. И не наполнится ухо слушанием. И говорить слишком много слов - конца не будет. И все тайное, хорошо оно или дурно, рано или поздно станет явным. И во многой мудрости многие печали, и кто умножает познания - умножает скорбь.</p>
-			</div>
-		</div>
-		<audio id="music" src="assets/audio/music.mp3" autoplay="" loop="" onplaying="setTimeout(()=>{window.overlay.remove();render();start_text();},3500);" style="display: none;"></audio>
-		<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/page.js"></script>
-	</div></body>
+</body>
 </html>
